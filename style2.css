@@ -1,0 +1,189 @@
+/* ===========================
+   SERVICES PAGE (GALLERY)
+   =========================== */
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #ff512f, #f09819);
+  color: white;
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* SERVICES SECTION */
+.services {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* BUTTON FILTERS */
+.service-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.service-buttons button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 20px;
+  background: #eee;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.service-buttons button:hover {
+  background: #ddd;
+}
+
+.service-buttons button.active {
+  background: #ff512f;
+  color: white;
+}
+
+/* GALLERY GRID */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+/* Gallery Images */
+.gallery img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* ===========================
+   MODAL (IMAGE PREVIEW)
+   =========================== */
+#preview-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+#preview-modal img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+#preview-modal span {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ===========================
+   TABLET
+=========================== */
+@media (min-width: 600px) {
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery img {
+    height: 180px;
+  }
+}
+
+/* ===========================
+   DESKTOP
+=========================== */
+@media (min-width: 900px) {
+
+  .hero {
+    padding: 80px 40px 50px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .gallery img {
+    height: 220px;
+  }
+
+  .service-buttons button {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+}
+
+/* ===========================
+   SMALL PHONES FIX
+=========================== */
+@media (max-width: 480px) {
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .service-buttons {
+    gap: 6px;
+  }
+
+  .service-buttons button {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
