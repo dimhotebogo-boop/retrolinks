@@ -2,219 +2,47 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- MOBILE FIRST META TAGS -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#ff512f">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Contact Retro Links">
+<meta name="format-detection" content="telephone=yes">
+
+<!-- SEO META TAGS -->
+<meta name="description" content="Contact Retro Links Digital Printing. Reach us via WhatsApp or Facebook for T-shirt printing, branding, stickers, and more in Botswana.">
+<meta name="keywords" content="contact Retro Links, printing Botswana, WhatsApp printing services, custom t-shirts Botswana">
+<meta name="author" content="Retro Links Digital Printing">
+<meta name="robots" content="index, follow">
+
 <title>Contact Us - Retro Links</title>
 
+<!-- OPEN GRAPH (WhatsApp / Facebook) -->
+<meta property="og:title" content="Contact Retro Links Digital Printing">
+<meta property="og:description" content="Get in touch with Retro Links for all your digital printing needs. Message us on WhatsApp or Facebook.">
+<meta property="og:image" content="IMAGES/YH.JPG">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_BW">
+<meta property="og:url" content="https://yourwebsite.com/contact.html">
+
+<!-- TWITTER -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact Retro Links Digital Printing">
+<meta name="twitter:description" content="Reach out to Retro Links via WhatsApp or Facebook today.">
+<meta name="twitter:image" content="IMAGES/YH.JPG">
+
+<!-- GOOGLE FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-<style>
-body{
-    margin:0;
-    font-family:'Poppins', sans-serif;
-    background:#f5f5f5;
-    color:#333;
-}
-
-/* HEADER */
-header{
-    background:white;
-    display:flex;
-    justify-content:space-between; /* logo left, nav right */
-    align-items:center;
-    padding:15px 60px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-}
-
-.logo img{
-    height:60px;
-    margin-right:10px;
-}
-
-/* NAVIGATION */
-nav{
-    display:flex;
-    align-items:center;
-    gap:20px;
-}
-
-nav a{
-    text-decoration:none;
-    color:#333;
-    font-weight:500;
-    transition:.3s;
-    display:flex;
-    align-items:center;
-    padding:8px 12px;
-    border-radius:8px;
-}
-
-nav a img{
-    margin-right:8px;
-    width:20px;
-    height:20px;
-}
-
-nav a:hover{
-    color:#ff512f;
-    background: rgba(255,81,47,0.1);
-}
-
-/* HERO */
-.hero{
-    padding:80px 60px;
-    background:linear-gradient(90deg,#ff512f,#f09819);
-    color:white;
-    text-align:center;
-}
-
-.hero h1{
-    font-size:48px;
-    margin-bottom:10px;
-}
-
-.hero p{
-    font-size:20px;
-}
-
-/* CONTACT SECTION */
-.contact-section{
-    max-width:1000px;
-    margin:50px auto;
-    padding:0 20px;
-}
-
-.contact-section h2{
-    font-size:32px;
-    color:#ff512f;
-    margin-bottom:30px;
-    text-align:center;
-}
-
-.contact-container{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap:40px;
-}
-
-/* FORM */
-.contact-form{
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.1);
-    width:400px;
-    display:flex;
-    flex-direction: column;
-}
-
-.contact-form input,
-.contact-form textarea{
-    padding:10px 15px;
-    margin-bottom:15px;
-    border-radius:8px;
-    border:1px solid #ccc;
-    font-size:16px;
-}
-
-.contact-form button{
-    padding:12px 20px;
-    background:#ff512f;
-    color:white;
-    border:none;
-    border-radius:25px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:.3s;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.contact-form button img{
-    margin-right:8px;
-    width:20px;
-    height:20px;
-}
-
-.contact-form button:hover{
-    background:#f09819;
-}
-
-/* LOCATIONS / QUICK CONTACT */
-.contact-info{
-    width:350px;
-    text-align:center;
-}
-
-.contact-info h3{
-    color:#ff512f;
-    margin-bottom:15px;
-}
-
-.contact-info p{
-    font-size:16px;
-    line-height:1.5;
-    margin-bottom:10px;
-}
-
-.contact-info a{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    margin-top:10px;
-    padding:10px 18px;
-    border-radius:25px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.contact-info a img{
-    margin-right:8px;
-    width:24px;
-    height:24px;
-}
-
-.contact-info a:hover{
-    opacity:0.8;
-}
-
-/* FOOTER */
-footer{
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-    header{
-        flex-direction: column;
-        align-items:flex-start;
-    }
-    nav{
-        flex-wrap: wrap;
-        gap:10px;
-        margin-top:10px;
-    }
-    .contact-container{
-        flex-direction: column;
-        align-items:center;
-    }
-}
-</style>
+<!-- EXTERNAL CSS -->
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<!-- HEADER -->
 <header>
     <div class="logo">
         <img src="IMAGES/YH.JPG" alt="Retro Links Logo">
@@ -226,46 +54,51 @@ footer{
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
+
         <a href="https://wa.me/26772803135" target="_blank">
             <img src="IMAGES/icons/whatsapp.png" alt="WhatsApp Icon"> WhatsApp
         </a>
+
         <a href="https://www.facebook.com/profile.php?id=61579331484524" target="_blank">
             <img src="IMAGES/icons/facebook.png" alt="Facebook Icon"> Facebook
         </a>
     </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
     <h1>Contact Us</h1>
     <p>Send us a message directly to WhatsApp or Facebook!</p>
 </section>
 
-<!-- CONTACT SECTION -->
 <section class="contact-section">
     <h2>Get in Touch</h2>
+
     <div class="contact-container">
 
-        <!-- WhatsApp Contact Form -->
+        <!-- FORM -->
         <div class="contact-form">
             <input type="text" id="name" placeholder="Your Name" required>
             <input type="email" id="email" placeholder="Your Email" required>
             <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
+
             <button type="button" onclick="sendWhatsApp()">
-                <img src="IMAGES/icons/whatsapp.png" alt="WhatsApp Icon"> Send to WhatsApp
+                <img src="IMAGES/icons/whatsapp.png" alt="WhatsApp Icon">
+                Send to WhatsApp
             </button>
         </div>
 
-        <!-- Contact Info / Locations -->
+        <!-- CONTACT INFO -->
         <div class="contact-info">
             <h3>Our Locations</h3>
             <p><strong>Molepolole:</strong> Main branch serving clients with quality printing services.</p>
             <p><strong>Gaborone West:</strong> Current location in Gaborone West.</p>
 
             <h3>Quick Contact</h3>
+
             <a href="https://wa.me/26772803135" target="_blank">
                 <img src="IMAGES/icons/whatsapp.png" alt="WhatsApp Icon"> WhatsApp
             </a>
+
             <a href="https://www.facebook.com/profile.php?id=61579331484524" target="_blank">
                 <img src="IMAGES/icons/facebook.png" alt="Facebook Icon"> Facebook
             </a>
