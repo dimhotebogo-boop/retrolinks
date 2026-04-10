@@ -1,9 +1,8 @@
 /* ===========================
-   SERVICES PAGE — gallery & buttons
-   (matches style2.css base)
+   SERVICES PAGE — APPEND TO BOTTOM OF style2.css
 =========================== */
 
-/* ---- GALLERY BUTTON BAR ---- */
+/* GALLERY FILTER BUTTONS */
 .service-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -37,7 +36,7 @@
   border-color: #f09819;
 }
 
-/* ---- GALLERY GRID ---- */
+/* GALLERY GRID */
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -58,7 +57,7 @@
   box-shadow: 0 0 20px rgba(255, 81, 47, 0.6);
 }
 
-/* ---- MODAL ---- */
+/* MODAL */
 #preview-modal {
   display: none;
   position: fixed;
@@ -87,7 +86,7 @@
   user-select: none;
 }
 
-/* ---- TABLET 600px+ ---- */
+/* TABLET 600px+ */
 @media (min-width: 600px) {
   .gallery {
     grid-template-columns: repeat(3, 1fr);
@@ -95,7 +94,7 @@
   }
 }
 
-/* ---- DESKTOP 900px+ ---- */
+/* DESKTOP 900px+ */
 @media (min-width: 900px) {
   .gallery {
     grid-template-columns: repeat(4, 1fr);
