@@ -2,206 +2,136 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <meta name="theme-color" content="#ff512f">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Retro Links Services">
 <meta name="format-detection" content="telephone=yes">
-
 <meta name="description" content="Explore Retro Links services including graphic design, T-shirt printing, stickers, tickets, and branding solutions in Botswana.">
 <meta name="keywords" content="printing services Botswana, t-shirt printing, graphic design, branding, stickers Retro Links">
 <meta name="author" content="Retro Links Digital Printing">
 <meta name="robots" content="index, follow">
-
 <title>Services - Retro Links</title>
-
 <meta property="og:title" content="Retro Links Printing Services">
 <meta property="og:description" content="Check out our printing portfolio including T-shirts, branding, stickers and graphic designs.">
 <meta property="og:image" content="IMAGES/YH.JPG">
 <meta property="og:type" content="website">
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="style2.css">
-
-<style>
-/* MINIMUM REQUIRED NAV FIX (ADD TO YOUR CSS FILE IF YOU WANT) */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background: #fff;
-}
-
-.nav-right {
-    display: flex;
-}
-
-.nav-right.open {
-    display: block;
-}
-
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-right {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background: #111;
-        width: 200px;
-        display: none;
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .nav-right nav {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-}
-</style>
-
 </head>
 
 <body>
 
-<!-- HEADER (UPDATED) -->
+<!-- HEADER -->
 <header>
-
-<div class="logo">
+  <div class="logo">
     <img src="IMAGES/YH.JPG" alt="Retro Links Logo">
     <h3>Retro Links</h3>
-</div>
+  </div>
 
-<!-- HAMBURGER -->
-<button class="hamburger" id="hamburger">
+  <button class="hamburger" id="hamburger">
     <span></span>
     <span></span>
     <span></span>
-</button>
+  </button>
 
-<!-- NAV -->
-<div class="nav-right" id="navMenu">
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-
-    <a class="whatsapp-btn" href="https://wa.me/26772803135" target="_blank">
-        Chat on WhatsApp
-    </a>
-</nav>
-</div>
-
+  <div class="nav-right" id="navMenu">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a class="whatsapp-btn" href="https://wa.me/26772803135" target="_blank">Chat on WhatsApp</a>
+    </nav>
+  </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-    <div class="hero-text">
-        <h1>Our Printing Portfolio</h1>
-        <p>SERVICES WHICH WE OFFER</p>
-    </div>
+  <div class="hero-text">
+    <h1>Our Printing Portfolio</h1>
+    <p>SERVICES WHICH WE OFFER</p>
+  </div>
 </section>
 
-<!-- SERVICES -->
+<!-- SERVICES GALLERY -->
 <section class="services">
-<h2>Our Work Samples</h2>
+  <h2>Our Work Samples</h2>
 
-<div class="service-buttons">
+  <div class="service-buttons">
     <button class="active" onclick="loadGallery('graphic', event)">GRAPHIC DESIGNS</button>
     <button onclick="loadGallery('tshirt', event)">T-SHIRT PRINTING</button>
     <button onclick="loadGallery('stickers', event)">STICKERS & TICKETS</button>
     <button onclick="loadGallery('branding', event)">BRANDING</button>
-</div>
+  </div>
 
-<div class="gallery" id="gallery"></div>
+  <div class="gallery" id="gallery"></div>
 </section>
 
 <!-- MODAL -->
 <div id="preview-modal">
-    <span onclick="closeModal()">&times;</span>
-    <img id="modal-img" src="">
+  <span onclick="closeModal()">&times;</span>
+  <img id="modal-img" src="">
 </div>
 
 <footer>
-<p>© 2026 Retro Links Digital Printing | All Rights Reserved</p>
+  <p>© 2026 Retro Links Digital Printing | All Rights Reserved</p>
 </footer>
 
 <script>
-/* ===========================
-   HAMBURGER MENU
-=========================== */
+/* HAMBURGER */
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("navMenu");
 
 hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("open");
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("open");
 });
 
-/* ===========================
-   GALLERY
-=========================== */
+/* GALLERY */
 const categories = {
-    graphic: 12,
-    tshirt: 30,
-    stickers: 20,
-    branding: 30
+  graphic: 12,
+  tshirt: 30,
+  stickers: 20,
+  branding: 30
 };
 
 const gallery = document.getElementById("gallery");
 const modal = document.getElementById("preview-modal");
 const modalImg = document.getElementById("modal-img");
 
-function loadGallery(category, event){
-    document.querySelectorAll('.service-buttons button')
-        .forEach(btn => btn.classList.remove('active'));
+function loadGallery(category, event) {
+  document.querySelectorAll('.service-buttons button')
+    .forEach(btn => btn.classList.remove('active'));
 
-    if(event && event.target){
-        event.target.classList.add('active');
-    }
+  if (event && event.target) {
+    event.target.classList.add('active');
+  }
 
-    gallery.innerHTML = '';
+  gallery.innerHTML = '';
 
-    for(let i = 1; i <= categories[category]; i++){
-        const img = document.createElement('img');
-        img.src = `IMAGES/services/${category}/${i}.jpg`;
-        img.alt = category + " image " + i;
-
-        img.onclick = () => openModal(img.src);
-
-        gallery.appendChild(img);
-    }
+  for (let i = 1; i <= categories[category]; i++) {
+    const img = document.createElement('img');
+    img.src = `IMAGES/services/${category}/${i}.jpg`;
+    img.alt = category + " image " + i;
+    img.onclick = () => openModal(img.src);
+    gallery.appendChild(img);
+  }
 }
 
-function openModal(src){
-    modal.style.display = 'flex';
-    modalImg.src = src;
+function openModal(src) {
+  modal.style.display = 'flex';
+  modalImg.src = src;
 }
 
-function closeModal(){
-    modal.style.display = 'none';
+function closeModal() {
+  modal.style.display = 'none';
 }
 
 window.onload = () => {
-    loadGallery('graphic', { target: document.querySelector('.service-buttons button') });
+  loadGallery('graphic', { target: document.querySelector('.service-buttons button') });
 };
 </script>
 
