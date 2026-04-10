@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
-<!-- MOBILE FIRST META TAGS -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 <meta name="theme-color" content="#ff512f">
 <meta name="mobile-web-app-capable" content="yes">
@@ -11,121 +9,116 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Contact Retro Links">
 <meta name="format-detection" content="telephone=yes">
-
-<!-- SEO META TAGS -->
 <meta name="description" content="Contact Retro Links Digital Printing. Reach us via WhatsApp or Facebook for T-shirt printing, branding, stickers, and more in Botswana.">
 <meta name="keywords" content="contact Retro Links, printing Botswana, WhatsApp printing services, custom t-shirts Botswana">
 <meta name="author" content="Retro Links Digital Printing">
 <meta name="robots" content="index, follow">
-
 <title>Contact Us - Retro Links</title>
-
-<!-- OPEN GRAPH (WhatsApp / Facebook) -->
 <meta property="og:title" content="Contact Retro Links Digital Printing">
 <meta property="og:description" content="Get in touch with Retro Links for all your digital printing needs. Message us on WhatsApp or Facebook.">
-<meta property="og:image" content="IMAGES/YH.JPG">
+<meta property="og:image" content="IMAGES/YH.jpg">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_BW">
 <meta property="og:url" content="https://yourwebsite.com/contact.html">
-
-<!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Contact Retro Links Digital Printing">
 <meta name="twitter:description" content="Reach out to Retro Links via WhatsApp or Facebook today.">
 <meta name="twitter:image" content="IMAGES/YH.JPG">
-
-<!-- GOOGLE FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-<!-- EXTERNAL CSS -->
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="style2.css">
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-    <div class="logo">
-        <img src="IMAGES/YH.JPG" alt="Retro Links Logo">
-        <h3>Retro Links</h3>
-    </div>
+  <div class="logo">
+    <img src="IMAGES/YH.jpg" alt="Retro Links Logo">
+    <h3>Retro Links</h3>
+  </div>
 
+  <button class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="nav-right" id="navMenu">
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-
-        <a href="https://wa.me/26772803135" target="_blank">
-            <img src="IMAGES/icons/whatsapp.png" alt="WhatsApp Icon"> WhatsApp
-        </a>
-
-        <a href="https://www.facebook.com/profile.php?id=61579331484524" target="_blank">
-            <img src="IMAGES/icons/facebook.png" alt="Facebook Icon"> Facebook
-        </a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a class="whatsapp-btn" href="https://wa.me/26772803135" target="_blank">Chat on WhatsApp</a>
     </nav>
+  </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
+  <div class="hero-text">
     <h1>Contact Us</h1>
     <p>Send us a message directly to WhatsApp or Facebook!</p>
+  </div>
 </section>
 
+<!-- CONTACT -->
 <section class="contact-section">
-    <h2>Get in Touch</h2>
+  <h2>Get in Touch</h2>
 
-    <div class="contact-container">
+  <div class="contact-container">
 
-        <!-- FORM -->
-        <div class="contact-form">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
-
-            <button type="button" onclick="sendWhatsApp()">
-                <img src="IMAGES/icons/whatsapp.png" alt="WhatsApp Icon">
-                Send to WhatsApp
-            </button>
-        </div>
-
-        <!-- CONTACT INFO -->
-        <div class="contact-info">
-            <h3>Our Locations</h3>
-            <p><strong>Molepolole:</strong> Main branch serving clients with quality printing services.</p>
-            <p><strong>Gaborone West:</strong> Current location in Gaborone West.</p>
-
-            <h3>Quick Contact</h3>
-
-            <a href="https://wa.me/26772803135" target="_blank">
-                <img src="IMAGES/icons/whatsapp.png" alt="WhatsApp Icon"> WhatsApp
-            </a>
-
-            <a href="https://www.facebook.com/profile.php?id=61579331484524" target="_blank">
-                <img src="IMAGES/icons/facebook.png" alt="Facebook Icon"> Facebook
-            </a>
-        </div>
-
+    <!-- FORM -->
+    <div class="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="button" onclick="sendWhatsApp()">Send to WhatsApp</button>
     </div>
+
+    <!-- CONTACT INFO -->
+    <div class="contact-info">
+      <h3>Our Locations</h3>
+      <p><strong>Molepolole:</strong> Main branch serving clients with quality printing services.</p>
+      <p><strong>Gaborone West:</strong> Current location in Gaborone West.</p>
+
+      <h3 style="margin-top: 20px;">Quick Contact</h3>
+      <a href="https://wa.me/26772803135" target="_blank">WhatsApp</a>
+      <a href="https://www.facebook.com/profile.php?id=61579331484524" target="_blank">Facebook</a>
+    </div>
+
+  </div>
 </section>
 
 <footer>
-    <p>© 2026 Retro Links Digital Printing | All Rights Reserved</p>
+  <p>© 2026 Retro Links Digital Printing | All Rights Reserved</p>
 </footer>
 
 <script>
-function sendWhatsApp(){
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
+/* HAMBURGER */
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
 
-    if(name === "" || email === "" || message === ""){
-        alert("Please fill in all fields.");
-        return;
-    }
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("open");
+});
 
-    const number = "26772803135";
-    const text = `Hello Retro Links, my name is ${name}. Email: ${email}. Message: ${message}`;
-    const url = `https://wa.me/${number}?text=${encodeURIComponent(text)}`;
-    window.open(url, "_blank");
+/* WHATSAPP FORM */
+function sendWhatsApp() {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if (name === "" || email === "" || message === "") {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  const number = "26772803135";
+  const text = `Hello Retro Links, my name is ${name}. Email: ${email}. Message: ${message}`;
+  const url = `https://wa.me/${number}?text=${encodeURIComponent(text)}`;
+  window.open(url, "_blank");
 }
 </script>
 
